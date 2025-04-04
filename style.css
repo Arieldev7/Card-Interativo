@@ -1,0 +1,94 @@
+/* Estilos gerais da página */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    align-items: center; /* Alinha verticalmente ao centro */
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Cor de fundo da página */
+  }
+  
+  /* Alinhamento do texto */
+  .texto {
+    text-align: center;
+  }
+  
+  /* Classe para fazer a imagem pulsar */
+  .img-pulsante {
+    /* Definir a animação chamada 'pulse' com duração de 1.5 segundos e repetir infinitamente */
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* Definição da animação 'pulse' */
+  @keyframes pulse {
+    /* A imagem começa com o tamanho original */
+    0% {
+      transform: scale(1);
+    }
+  
+    /* A imagem aumenta um pouco seu tamanho para criar o efeito de pulsação */
+    50% {
+      transform: scale(1.1);
+    }
+  
+    /* A imagem volta ao tamanho original */
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .caixa {
+    /* Definindo o tamanho da caixa */
+    width: 180px;
+    padding: 2px;
+    
+    /* Definindo a cor de fundo da caixa como vermelho */
+    background-color: rgb(0, 0, 0);
+    
+    /* Alinhamento de texto dentro da caixa */
+    text-align: center;
+    
+    /* Adicionando borda arredondada */
+    border-radius: 10px;
+    
+    /* Colocando sombra na caixa para dar um efeito de profundidade */
+    box-shadow: 0 4px 8px rgb(228, 228, 228);
+  }
+  
+  /* Classe para a imagem dentro da caixa */
+  .caixa img {
+    /* Definindo o tamanho da imagem */
+    width: 100%;
+    height: auto;
+    
+    /* Centralizando a imagem */
+    display: block;
+    margin: 0 auto;
+    
+    /* Adicionando margem inferior para separar da descrição */
+    margin-bottom: 10px;
+  }
+  
+  /* Classe para o texto dentro da caixa */
+  .caixa p {
+    /* Definindo a cor do texto para branco para se destacar no fundo vermelho */
+    color: rgb(168, 16, 16);
+    
+    /* Ajustando o tamanho da fonte */
+    font-size: 16px;
+    
+    /* Adicionando espaçamento entre as letras para um visual mais limpo */
+    letter-spacing: 1px;
+  }
+  
+  .more-info {
+    display: none; /* Inicialmente as informações adicionais estão escondidas */
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .hide {
+    display: none; /* Classe para esconder a descrição inicial */
+  }
+  

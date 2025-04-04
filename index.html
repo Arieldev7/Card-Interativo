@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Interativo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="texto">
+    <h1>Saitama</h1>
+    <div class="caixa">
+      <img src="img/saitama.jpg" class="img-pulsante" id="saitamaImage" alt="Imagem do Saitama">
+      <p id="descricaoInicial">Saitama, protagonista de One Punch Man, é um herói que, após três anos de treinamento intenso, se torna tão forte que derrota qualquer inimigo com um único soco.</p>
+      <button id="infoButton">Mostrar mais informações</button>
+      
+      <!-- Mais informações que serão exibidas ao clicar no botão -->
+      <div class="more-info" id="moreInfo">
+        <p>Seu treinamento foi tão intenso que ele perdeu seus cabelos, e ele se tornou tão poderoso que não encontra nenhum desafio digno de sua força. Isso o deixou entediado e, ao mesmo tempo, ansioso por algo mais significativo.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Selecionando os elementos no DOM
+    const infoButton = document.getElementById('infoButton');
+    const moreInfo = document.getElementById('moreInfo');
+    const descricaoInicial = document.getElementById('descricaoInicial');
+    const saitamaImage = document.getElementById('saitamaImage');
+
+    // Função para alternar a visibilidade das informações e mudar a imagem
+    infoButton.addEventListener('click', function() {
+      // Mostrar ou esconder mais informações
+      moreInfo.style.display = (moreInfo.style.display === 'none' || moreInfo.style.display === '') ? 'block' : 'none';
+      
+      // Esconder a primeira parte da informação
+      descricaoInicial.style.display = 'none';
+      
+      // Alterar a imagem para uma nova
+      if (saitamaImage.src.includes('saitama.jpg')) {
+        saitamaImage.src = 'img/saitamaserio.jpg'; // Caminho da imagem alterada
+      } else {
+        saitamaImage.src = 'img/saitama.jpg'; // Caminho da imagem original
+      }
+      
+      // Mudar o texto do botão
+      if (infoButton.innerHTML === "Mostrar mais informações") {
+        infoButton.innerHTML = "Mostrar menos informações";
+      } else {
+        infoButton.innerHTML = "Mostrar mais informações";
+      }
+    });
+  </script>
+</body>
+</html>
